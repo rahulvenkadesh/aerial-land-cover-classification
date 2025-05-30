@@ -1,27 +1,27 @@
-# aerial-land-cover-classification
-Deep learning-based aerial image land cover classification using Tailored UNET and satellite imagery.
+# Brain Tumor Segmentation using Tailored U-Net (BRATS 2020)
 
-# Aerial Land Cover Classification using Tailored U-Net
+This project implements a deep learning-based brain tumor segmentation model using a customized U-Net architecture trained on the BRATS 2020 dataset.
 
-This project demonstrates semantic segmentation of aerial images for land cover classification using a custom-designed U-Net model built with TensorFlow/Keras.
+## 🧠 Dataset
 
-## 🧠 Model Architecture
+- **BRATS 2020** (Brain Tumor Segmentation Challenge)
+- Multi-modal MRI scans: T1, T1c, T2, FLAIR
+- Task: Segment tumor subregions — edema, enhancing tumor, necrotic core
+- Download from: [Kaggle - BRATS 2020](https://www.kaggle.com/datasets/awsaf49/brats20-dataset-training-validation)
 
-- Tailored U-Net with:
-  - Encoder: Multiple Conv2D + BatchNorm + Dropout layers
-  - Decoder: Conv2DTranspose + skip connections from encoder
-  - Output layer: Softmax for multi-class classification
-- Input image size: **256x256x3**
-- Optimizer: Adam
+## 🧬 Model
+
+- **Tailored U-Net** architecture:
+  - Encoder: Conv2D + BatchNormalization + Dropout
+  - Decoder: Conv2DTranspose + skip connections
+  - Final Activation: Softmax
+- Input: 256x256 MRI slices
 - Loss: Categorical Crossentropy
+- Optimizer: Adam
 
-## 📁 Files
-- `Aerial_Land_Classification.ipynb`: The main Jupyter Notebook
-- `README.md`: Project documentation
-- `requirements.txt`: Python package dependencies
+## 🛠️ How to Run
 
-## 🚀 How to Run
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/aerial-land-cover-classification.git
-   cd aerial-land-cover-classification
+   git clone https://github.com/your-username/brats2020-unet-segmentation.git
+   cd brats2020-unet-segmentation
